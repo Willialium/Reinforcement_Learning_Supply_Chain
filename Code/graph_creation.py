@@ -19,12 +19,12 @@ def add_graph_to_show(agent_code_name, agent_label_name):
 add_s_q = True
 add_sarsa = True
 add_reinforce_1 = False  # Linear
-add_reinforce_2 = True  # Quadratic
+add_reinforce_2 = False  # Quadratic
 add_reinforce_3 = False  # RBF
 tests = ["simple_environment_2", "simple_environment_3", "simple_environment_4", "medium_environment",
          "medium_environment_3stores", "medium_environment_3stores2", "medium_hard_environment_2",
          "special_environment", "special_environment_2", "difficult_environment"]
-tests_to_graph = [True, False, False, False, True, False, False, False, False, True]
+tests_to_graph = [True, False, False, False, False, False, False, False, False, False]
 results_folder_path = "../results/"
 # reward_plot_step = 10
 # Create auxiliary lists
@@ -54,7 +54,7 @@ for test_num in range(len(tests)):
                     sum100 -= rewards[i - 100]
                 rewards_window.append(sum100 / min(i + 1, 100))
             # plt.title("Rewards for " + test)
-            plt.plot(range(0, 15000, 10), rewards_window[:15000:10], marks[agent_num] + "-", markevery=30,
+            plt.plot(range(0, 5000, 10), rewards_window[:15000:10], marks[agent_num] + "-", markevery=30,
                      label=agent_labels[agent_num])
             plt.xlabel('episodes', fontsize=18)
             plt.ylabel('reward', fontsize=18)

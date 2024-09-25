@@ -41,7 +41,7 @@ def evaluate_agent(agent, env, n_episodes, max_steps, output, status_freq, print
     for episode in np.arange(n_episodes):
         # Reset environment, select initial action and reset episode reward
         state = env.reset()
-        action = agent.get_action(state)
+        action = agent.get_action(state, env.demand)
         episode_reward = 0
 
         # save some stuff
@@ -55,7 +55,7 @@ def evaluate_agent(agent, env, n_episodes, max_steps, output, status_freq, print
             state_new, reward, done, info = env.step(action)
 
             # Select a new action
-            action_new = agent.get_action(state_new)
+            action_new = agent.get_action(state_new, env.demand)
 
             # Update episode reward
             episode_reward += np.power(env.gamma, step) * reward

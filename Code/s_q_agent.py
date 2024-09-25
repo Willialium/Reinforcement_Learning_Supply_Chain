@@ -13,7 +13,7 @@ class s_q_agent(object):
         # Initialize status logger
         self.log = []
 
-    def get_action(self, state):
+    def get_action(self, state, demand=None):
         '''
             Heuristic based on s_q policy
         '''

@@ -24,7 +24,7 @@ from evaluate_agent import print_step
 results_folder_path = "../results/"
 
 # Simulation parameters
-n_episodes = 15000
+n_episodes = 5000
 max_steps = 24 # 24 Months
 
 # Visualization parameters
@@ -44,7 +44,7 @@ add_reinforce_2 = False  # Quadratic
 add_reinforce_3 = False  # RBF
 
 # Simple2,3,4, Medium,2,3,4, weird,2, Difficult
-test_to_run = [True, False, False, False, True, False, False, False, False, False, True]
+test_to_run = [True, False, False, False, False, False, False, False, False, False, False]
 
 # Instantiate environment
 environments.append(SupplyDistribution(n_stores=1,
