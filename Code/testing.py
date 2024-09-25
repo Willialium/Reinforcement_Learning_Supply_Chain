@@ -39,12 +39,12 @@ env_names = []
 # Agent Variables
 add_s_q = True
 add_sarsa = True
-add_reinforce_1 = True  # Linear
-add_reinforce_2 = True  # Quadratic
-add_reinforce_3 = True  # RBF
+add_reinforce_1 = False  # Linear
+add_reinforce_2 = False  # Quadratic
+add_reinforce_3 = False  # RBF
 
 # Simple2,3,4, Medium,2,3,4, weird,2, Difficult
-test_to_run = [False, False, False, True, False, False, False, False, True, False, False]
+test_to_run = [True, False, False, False, True, False, False, False, False, False, True]
 
 # Instantiate environment
 environments.append(SupplyDistribution(n_stores=1,

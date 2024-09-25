@@ -48,7 +48,7 @@ class SupplyDistribution:
         """
         Resets the environment to the starting conditions
         """
-        self.s = (self.cap_store/2).astype(np.int) #np.zeros(self.n_stores + 1, dtype=int)  # +1 Because the central warehouse is not counted as a store
+        self.s = (self.cap_store/2).astype(int) #np.zeros(self.n_stores + 1, dtype=int)  # +1 Because the central warehouse is not counted as a store
         #self.s[0] = self.cap_store[0]/2
         self.t = 0
         # Initialize demand and update it directly to avoid jumps in demand of first step

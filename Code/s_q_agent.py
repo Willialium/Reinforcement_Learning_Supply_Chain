@@ -35,7 +35,7 @@ class s_q_agent(object):
         if disposable_produce < self.threshold[0]:
             a[0] = self.reorder_quantity[0]
 
-        return a.astype(np.int)
+        return a.astype(int)
 
 
     def update(self, state, action, reward, state_new, action_new):

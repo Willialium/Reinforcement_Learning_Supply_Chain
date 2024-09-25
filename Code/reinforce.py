@@ -78,7 +78,7 @@ def RBF_vec(state , centers):
     rbf_vec = zeros((centers.shape)) # shape of centers: nbr_rbf, n_stores+1
     for i in range(centers.shape[0]): # for every rbf 
         rbf_vec[i,:] = exp( - (state - centers[i,:])**2/(2*sigma))
-    return hstack(rbf_vec[:,i] for i in range(rbf_vec.shape[1]))
+    return hstack([rbf_vec[:,i] for i in range(rbf_vec.shape[1])])
 
 
 class REINFORCE_agent(object):
